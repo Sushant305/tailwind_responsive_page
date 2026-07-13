@@ -23,13 +23,21 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li class="bg-blue-500 text-white px-6 py-2 rounded-2xl">
-                        <a href="#">Get Started</a></li>
+                        <a href="#">Get Started</a>
+                    </li>
                 </ul>
             </div>
 
-            <div class="md:hidden text-3xl">
+            <div class="md:hidden text-3xl" id="menuBtn">
                 ☰
             </div>
+
+            <ul id="mobileMenu" class="hidden  flex flex-col absolute top-20 left-0 w-full bg-white p-6">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -53,7 +61,7 @@
                 </div>
             </div>
             <div>
-                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900" alt="circuit image"
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900" alt="circuit image"
                     class="h-64 md:h-80 lg:h-96 rounded-xl shadow-xl object-cover">
             </div>
         </div>
@@ -65,8 +73,10 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 mt-6 ">
-            <div class="bg-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-                <div class="text-5xl mb-4 bg-blue-200 rounded-2xl flex items-center justify-center text-4xl w-20 h-20 ">⚡
+            <div
+                class="bg-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <div class="text-5xl mb-4 bg-blue-200 rounded-2xl flex items-center justify-center text-4xl w-20 h-20 ">
+                    ⚡
                 </div>
                 <h3 class="text-2xl font-semibold mb-2">
                     Lightning Fast
@@ -76,7 +86,8 @@
                 </p>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <div
+                class="bg-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                 <div class="text-5xl mb-4 bg-green-200 rounded-2xl flex items-center justify-center text-4xl w-20 h-20">
                     🔒</div>
                 <h3 class="text-2xl font-semibold mb-2">
@@ -87,7 +98,8 @@
                 </p>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <div
+                class="bg-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                 <div class="w-20 h-20 bg-purple-300 rounded-2xl flex items-center justify-center text-4xl">📊</div>
                 <h3 class="text-2xl font-semibold mb-2">
                     Analytics
@@ -113,6 +125,14 @@
     </footer>
 
 
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
 </body>
 
 </html>

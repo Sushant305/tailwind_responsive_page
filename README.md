@@ -1,4 +1,6 @@
 # tailwind_responsive_page
+ 
+I am not using any AI tools in this project. I am only using the official Tailwind CSS documentation.
 
 ## ▶️ How to Run the Project
 
